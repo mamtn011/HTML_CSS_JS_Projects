@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.8rem;
+  padding: 3rem 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.parent {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 0.6rem;
+  background-image: linear-gradient(
+    rgba(34, 193, 195, 1),
+    rgba(253, 187, 45, 0.7)
+  );
+  margin-bottom: 1rem;
+}
+
+.child {
+  width: 15rem;
+  height: 15rem;
+  border: 0.4rem;
+  background-image: linear-gradient(
+    rgba(39, 53, 218, 0.6),
+    rgba(223, 34, 163, 0.8)
+  );
+  display: grid;
+  place-items: center;
+}
+.child p {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* Trick 1 flex */
+.trick_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trick 2 grid */
+.trick_2 {
+  display: grid;
+  place-items: center;
+}
+
+/* Trick 3 grid*/
+.trick_3 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trick 4 position+transform */
+.trick_4 {
+  position: relative;
+}
+.trick_4 .child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Trick 5 flex+margin */
+.trick_5 {
+  display: flex;
+}
+.trick_5 .child {
+  margin: auto;
+}
