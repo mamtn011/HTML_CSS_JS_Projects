@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #121321;
+}
+.cradle {
+  width: 40rem;
+  height: 40rem;
+  border-top: 1.5rem solid #693def;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.cradle div {
+  width: 0.5rem;
+  height: 16rem;
+  background-color: #693def;
+  position: relative;
+}
+.cradle div::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  bottom: 0;
+  left: -1.2rem;
+  background-color: #693def;
+}
+
+.cradle div:first-child {
+  animation: left-swing 2s linear infinite;
+  -webkit-animation: left-swing 3s linear infinite;
+  transform-origin: top left;
+}
+.cradle div:last-child {
+  animation: right-swing 3s linear infinite;
+  -webkit-animation: right-swing 3s linear 1.5s infinite;
+  transform-origin: top right;
+}
+
+@keyframes left-swing {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 45deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes right-swing {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -45deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
