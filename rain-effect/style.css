@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/bg.JPG");
+  background-size: cover;
+}
+.rain {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./img/rain.png");
+  animation: raindrop 1s linear infinite;
+  -webkit-animation: raindrop 0.4s linear infinite;
+}
+@keyframes raindrop {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 10% 100%;
+  }
+}
