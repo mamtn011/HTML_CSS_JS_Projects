@@ -272,11 +272,10 @@ section .container:nth-child(2) {
 }
 .section-course .course-block {
   padding: 3.2rem;
-  box-shadow: var(--btn-box-shadow);
+  &:hover {
+    box-shadow: var(--btn-box-shadow);
+  }
 }
-/* .section-course .course-block:hover {
-  box-shadow: var(--btn-box-shadow);
-} */
 
 .course-block:nth-child(2) .icon .fa-solid {
   color: #68bf9b;
@@ -393,8 +392,46 @@ figure {
 }
 /***** End why-choose Section *****/
 
-/***** contact-home Section *****/
-.section-contact--home {
+/***** blog Section *****/
+.section-blog {
+  background-color: var(--bg-color);
+  & .grid {
+    gap: 4rem;
+  }
+}
+.blog-block {
+  background-color: var(--white-color);
+  box-shadow: var(--btn-box-shadow);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  &:hover {
+    scale: 1.1;
+  }
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+.blog-content {
+  padding: 2rem;
+  & .blog-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.8rem;
+    & .fa-solid {
+      padding: 0 0.5rem;
+      background-color: transparent;
+      font-size: 1.6rem;
+    }
+  }
+}
+/***** End blog Section *****/
+
+/***** promo Section *****/
+.section-promo {
   width: 60%;
   height: auto;
   margin: 0 auto 5rem auto;
@@ -410,24 +447,24 @@ figure {
     padding: 3.2rem;
   }
 }
-.section-contact--home .contact-image img {
+.section-promo .promo-image img {
   width: 90%;
   height: auto;
 }
-.section-contact--home .contact-content p {
+.section-promo .promo-content p {
   margin: 1.2rem 0 2.4rem 0;
 }
-.section-contact--home .fa-solid {
+.section-promo .fa-solid {
   padding: 0;
   color: var(--white-color);
   background-color: var(--main-color);
   font-size: 1.6rem;
   margin-right: 1.8rem;
 }
-.section-contact--home .contact-content a {
+.section-promo .promo-content a {
   color: var(--white-color);
 }
-/***** End contact-home Section *****/
+/***** End promo Section *****/
 /***** footer Section *****/
 .section-footer {
   background-color: var(--bg-footer);

@@ -15,10 +15,10 @@
   </head>
   <body>
     <!-- ========== Start HEADER ========== -->
-    <header class="section-navbar">
+    <header class="section-navbar" id="home">
       <div class="container">
         <div class="navbar-brand">
-          <a href="./index.html">
+          <a href="#">
             <img
               src="./assets/images/logo.png"
               alt="My website logo"
@@ -30,19 +30,19 @@
         <nav class="navbar">
           <ul>
             <li class="nav-item">
-              <a href="/" class="nav-link">Home</a>
+              <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/" class="nav-link">About</a>
+              <a href="#about" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="/" class="nav-link">Services</a>
+              <a href="#courses" class="nav-link">Courses</a>
             </li>
             <li class="nav-item">
-              <a href="/" class="nav-link">Blog</a>
+              <a href="#blog" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
-              <a href="/" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -104,7 +104,7 @@
       <!-- ========== End HERO Section ========== -->
 
       <!-- ========== Start ABOUT Section ========== -->
-      <section class="section-about">
+      <section class="section-about" id="about">
         <div class="container">
           <h2 class="section-common--heading">About Mobin EduHub</h2>
           <p class="section-common--subheading">
@@ -161,7 +161,7 @@
 
       <!-- ========== Start COURSES Section ========== -->
 
-      <section class="section-course">
+      <section class="section-course" id="courses">
         <div class="container">
           <h2 class="section-common--heading">Explore Our Courses</h2>
           <p class="section-common--subheading">
@@ -233,7 +233,7 @@
       <!-- ========== End COURSES Section ========== -->
 
       <!-- ========== Start WHY CHOOSE Section ========== -->
-      <section class="section-why--choose">
+      <section class="section-why--choose" id="why-choose">
         <div class="container">
           <h2 class="section-common--heading">Why Choose Mobin EduHub</h2>
           <p class="section-common--subheading">
@@ -315,36 +315,114 @@
       </section>
       <!-- ========== End WHY CHOOSE Section ========== -->
 
-      <!-- ========== Start CONTACT HOME Section ========== -->
-      <section class="section-contact--home" id="section-contact--home">
+      <!-- ========== Start BLOG Section ========== -->
+      <section class="section-blog" id="blog">
+        <div class="container">
+          <h2 class="section-common--heading">Explore Our Blog</h2>
+          <p class="section-common--subheading">
+            Explore our blog for insightful articles, tips, and updates on the
+            world of education, skill development, and personal growth.
+          </p>
+        </div>
+        <div class="container grid grid-four--cols">
+          <div class="blog-block">
+            <a href="#">
+              <figure>
+                <img src="./assets/images/blog-1.jpeg" alt="" />
+              </figure>
+              <div class="blog-content">
+                <div class="blog-date">
+                  <p><i class="fa-solid fa-calendar"></i>Feb 22 2024</p>
+                  <p><i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <h3 class="section-common--title">
+                  Code your first react app with us
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="blog-block">
+            <a href="#">
+              <figure>
+                <img src="./assets/images/blog-2.webp" alt="" />
+              </figure>
+              <div class="blog-content">
+                <div class="blog-date">
+                  <p><i class="fa-solid fa-calendar"></i>Feb 22 2024</p>
+                  <p><i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <h3 class="section-common--title">
+                  Code your first react app with us
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="blog-block">
+            <a href="#">
+              <figure>
+                <img src="./assets/images/blog-3.webp" alt="" />
+              </figure>
+              <div class="blog-content">
+                <div class="blog-date">
+                  <p><i class="fa-solid fa-calendar"></i>Feb 22 2024</p>
+                  <p><i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <h3 class="section-common--title">
+                  Code your first react app with us
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="blog-block">
+            <a href="#">
+              <figure>
+                <img src="./assets/images/blog-4.webp" alt="" />
+              </figure>
+              <div class="blog-content">
+                <div class="blog-date">
+                  <p><i class="fa-solid fa-calendar"></i>Feb 22 2024</p>
+                  <p><i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <h3 class="section-common--title">
+                  Code your first react app with us
+                </h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ========== End BLOG Section ========== -->
+
+      <!-- ========== Start PROMO Section ========== -->
+      <section class="section-promo" id="section-promo">
         <div class="container grid grid-two--cols">
-          <div class="contact-content">
-            <h2 class="contact-title section-common--heading">
+          <div class="promo-content">
+            <h2 class="section-common--heading">
               Let's revolutionize the way you study
             </h2>
             <p>Join our free bootcamps to know us better.</p>
             <div class="btn">
-              <a href="contact.html">
+              <a href="#">
                 Start Now <i class="fa-solid fa-arrow-circle-right"></i>
               </a>
             </div>
           </div>
-          <div class="contact-image">
+          <div class="promo-image">
             <figure>
               <img src="./assets/images/main.png" alt="a guy doing coding" />
             </figure>
           </div>
         </div>
       </section>
-      <!-- ========== End CONTACT HOME Section ========== -->
+      <!-- ========== End PROMO Section ========== -->
     </main>
     <!-- ========== End MAIN ========== -->
     <!-- ========== Start FOOTER ========== -->
-    <footer class="section-footer">
+    <footer class="section-footer" id="footer">
       <div class="container grid grid-four--cols">
         <div class="footer-1--div">
           <div class="logo-brand">
-            <a href="./index.html" class="footer-subheading">
+            <a href="#" class="footer-subheading">
               <span>Mobin</span> EduHub
             </a>
           </div>
@@ -364,31 +442,31 @@
         <div class="footer-2--div">
           <p class="footer-link--title">Links</p>
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
           </ul>
         </div>
         <div class="footer-3--div">
           <p class="footer-link--title">Courses</p>
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Course</a></li>
           </ul>
         </div>
         <div class="footer-4--div">
           <p class="footer-link--title">Blogs</p>
           <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </div>
       </div>
