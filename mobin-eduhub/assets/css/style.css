@@ -729,7 +729,10 @@ textarea {
   .grid-three--cols {
     grid-template-columns: 1fr;
   }
-
+  /* reusable */
+  .section-common--heading {
+    font-size: 2.4rem;
+  }
   /* header-section */
   .section-navbar .container {
     flex-direction: column;
@@ -743,6 +746,9 @@ textarea {
   /* hero-section  */
   .section-hero .grid {
     padding: 2.4rem 2.4rem 10rem 2.4rem;
+    & .hero-heading {
+      font-size: 3.6rem;
+    }
   }
   .section-hero--image {
     order: 1;
