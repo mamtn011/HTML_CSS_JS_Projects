@@ -763,11 +763,11 @@ textarea {
   .choose-center--div {
     order: 1;
     & figure::after {
-      width: 43rem;
+      width: 30rem;
       border: 0.5rem solid #cfdff8;
     }
     & figure::before {
-      width: 40rem;
+      width: 27rem;
       background-color: var(--main-color);
     }
     & img {
@@ -808,10 +808,10 @@ textarea {
   .choose-center--div {
     order: 1;
     & figure::after {
-      width: 33rem;
+      width: 30rem;
     }
     & figure::before {
-      width: 30rem;
+      width: 27rem;
     }
     & img {
       width: 50%;
@@ -840,15 +840,21 @@ textarea {
   }
 }
 @media (width <= 440px) {
+  /* header-section  */
+  .section-navbar .navbar ul {
+    gap: 1.4rem;
+    & li a {
+      font-size: 1.4rem;
+    }
+  }
   /* why-choose-section  */
-
   .choose-center--div {
     & figure::after {
-      width: 28rem;
+      width: 23rem;
       border: 0.5rem solid #cfdff8;
     }
     & figure::before {
-      width: 26rem;
+      width: 20rem;
       background-color: var(--main-color);
     }
   }
