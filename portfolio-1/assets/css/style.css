@@ -1,25 +1,6 @@
 /* imports  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* theme  */
-:root {
-  --white-color: #fff;
-  --black-color: #000;
-  --heading: rgb(0 10 45);
-  --para: #777777;
-  --para-tint: #e4e4e4;
-  --helper: #8490ff;
-  --helper-tint: #f3f4ff;
-  --bg: rgb(249 249 255);
-  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
-  --gradient-support: -webkit-linear-gradient(
-    0deg,
-    rgb(132 144 255) 0%,
-    rgb(98 189 252) 100%
-  );
-  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
-}
-
 /* base rule  */
 * {
   margin: 0;
@@ -39,17 +20,6 @@ h4 {
   font-family: "Poppins", sans-serif;
 }
 
-h1 {
-  color: var(--heading);
-  font-size: 6rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-
 p {
   color: var(--para);
   font-size: 1.7rem;
@@ -64,6 +34,152 @@ li {
   list-style: none;
 }
 
-/***** Header Section *****/
+p,
+a,
+label,
+li {
+  color: var(--para);
+  font-size: 1.7rem;
+  font-family: "Poppins", sans-serif;
+}
 
+section {
+  width: 100%;
+}
+
+/* theme  */
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --heading: rgb(0 10 45);
+  --menu-color: #212529;
+  --para: #777777;
+  --para-tint: #e4e4e4;
+  --helper: #8490ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradient-support: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.2);
+  --shadow-support: 0 2rem 2rem 0 rgba(132, 144, 255, 0.3);
+}
+
+/* layout  */
+.container {
+  width: 140rem;
+  margin: 0 auto;
+  padding: 8.4rem 6.4rem;
+}
+.grid {
+  display: grid;
+}
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* module / reusable  */
+.btn {
+  background: var(--gradient-support);
+  padding: 1.2rem 3.2rem;
+  border: none;
+  color: var(--helper-tint);
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.btn:hover,
+.btn:active {
+  box-shadow: var(--shadow-support);
+}
+/* state */
+/***** Header Section *****/
+.section-header {
+  width: 100%;
+  background-color: var(--bg);
+  & .container {
+    padding: 1.5rem 6.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .nav-brand img {
+      width: 20rem;
+      height: auto;
+    }
+
+    & .nav-menu ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 4rem;
+
+      & li a {
+        text-transform: uppercase;
+        color: var(--menu-color);
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        transition: color 0.3s linear;
+        -webkit-transition: color 0.3s linear;
+        -moz-transition: color 0.3s linear;
+        -ms-transition: color 0.3s linear;
+        -o-transition: color 0.3s linear;
+        &:hover {
+          color: var(--helper);
+        }
+        &:active {
+          color: var(--helper);
+        }
+      }
+    }
+  }
+}
 /***** End Header Section *****/
+
+/***** Hero Section *****/
+.section-hero {
+  background-color: var(--bg);
+  & .grid {
+    gap: 6.4rem;
+  }
+  & .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & .hero-subheading {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--helper);
+    }
+    & .hero-heading {
+      color: var(--heading);
+      font-size: 5.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    & .hero-description {
+      margin: 1.5rem 0 3.6rem 0;
+      max-width: 56rem;
+    }
+  }
+  & .hero-image {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+/***** End Hero Section *****/
