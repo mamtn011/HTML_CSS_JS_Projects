@@ -478,6 +478,25 @@ img {
 }
 /***** End Portfolio Section *****/
 
+/***** Start Counter Section *****/
+.section-counter {
+  background: var(--gradient-support);
+  color: var(--white-color);
+  text-align: center;
+  & .grid {
+    gap: 2.4rem;
+
+    & .counter-number {
+      font-size: 4rem;
+    }
+    & .counter p {
+      color: var(--white-color);
+      text-transform: capitalize;
+    }
+  }
+}
+/***** End Counter Section *****/
+
 /***** Media queries *****/
 @media (width<=1400px) {
   .container {
