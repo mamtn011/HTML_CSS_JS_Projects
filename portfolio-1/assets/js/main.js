@@ -15,7 +15,7 @@ function addRemoveClassInOverlay(overlay, dataset) {
   }
 }
 // add btn-active class in first button on initial load
-clickedButtons[0].classList.add("btn-active");
+// clickedButtons[0].classList.add("btn-active");
 
 // make first category items visible on initial load
 overlayImages.forEach((overlay) => {
