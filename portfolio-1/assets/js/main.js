@@ -40,3 +40,17 @@ ButtonsArea.addEventListener("click", (e) => {
   }
 });
 /*********** END PORTFOLIO FILTERING ***********/
+
+/*********** START SWIPER SLIDER FOR HOME TESTIMONIAL ***********/
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+/*********** END SWIPER SLIDER FOR HOME TESTIMONIAL ***********/
