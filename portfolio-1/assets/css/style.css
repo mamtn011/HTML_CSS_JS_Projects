@@ -52,10 +52,9 @@ img {
 input,
 textarea {
   width: 100%;
-  padding: 1rem 1.6rem;
+  padding: 1.4rem 1.8rem;
   font-size: 1.7rem;
-  border: 0.1rem solid var(--font-color);
-  box-shadow: var(--shadow);
+  border: 0.1rem solid #c9c9c9;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -64,6 +63,7 @@ textarea {
 
   &:focus-visible {
     outline: 0.1rem solid var(--helper);
+    box-shadow: var(--shadow);
   }
 }
 /* theme  */
@@ -77,6 +77,7 @@ textarea {
   --helper: #8490ff;
   --helper-tint: #f3f4ff;
   --font-color: #ced3ff;
+  --footer-para: #adadad;
   --bg: rgb(249 249 255);
   --bg-overlay: #3e64ff;
   --bg-support: rgb(233 236 239);
@@ -789,6 +790,29 @@ textarea {
   }
 }
 /***** End Contact Section *****/
+/***** Start Footer Section *****/
+.section-footer {
+  background-color: var(--heading);
+
+  & .grid {
+    gap: 6.4rem;
+
+    & h3 {
+      color: var(--white-color);
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 2.4rem 0;
+    }
+  }
+
+  & p,
+  li,
+  a {
+    color: var(--footer-para);
+    font-size: 1.8rem;
+  }
+}
+/***** End Footer Section *****/
 
 /***** Media queries *****/
 @media (width<=1400px) {
