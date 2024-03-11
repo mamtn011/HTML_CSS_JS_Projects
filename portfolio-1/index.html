@@ -25,7 +25,7 @@
   <body>
     <!-- ========== Start HEADER ========== -->
     <header class="section-header" id="home">
-      <div class="container">
+      <div class="container" id="menu-container">
         <div class="nav-brand">
           <figure>
             <img src="./assets/images/logo-1.png" alt="Website Logo" />
@@ -34,22 +34,32 @@
         <nav class="nav-menu">
           <ul class="navbar-lists">
             <li>
-              <a href="#" class="nav-link home-link">Home</a>
+              <a href="#home" class="nav-link home-link">Home</a>
             </li>
             <li>
-              <a href="#" class="nav-link about-link">About</a>
+              <a href="#about" class="nav-link about-link">About</a>
             </li>
             <li>
-              <a href="#" class="nav-link services-link">Services</a>
+              <a href="#services" class="nav-link services-link">Services</a>
             </li>
             <li>
-              <a href="#" class="nav-link portfolio-link">Portfolio</a>
+              <a href="#portfolio" class="nav-link portfolio-link">Portfolio</a>
             </li>
             <li>
-              <a href="#" class="nav-link contact-link">Contact</a>
+              <a href="#contact" class="nav-link contact-link">Contact</a>
             </li>
           </ul>
         </nav>
+        <div class="mobile-menu--btns">
+          <ion-icon
+            name="menu-outline"
+            class="mobile-menu--icon menu"
+          ></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="mobile-menu--icon close"
+          ></ion-icon>
+        </div>
       </div>
     </header>
     <!-- ========== End HEADER ========== -->
@@ -293,19 +303,19 @@
       <section class="section section-counter">
         <div class="container grid grid-four--cols">
           <div class="counter">
-            <h2 class="counter-number">3+</h2>
-            <p>Years of experience</p>
-          </div>
-          <div class="counter">
-            <h2 class="counter-number">100+</h2>
+            <h2 class="counter-number" data-number="300">0+</h2>
             <p>Project completed</p>
           </div>
           <div class="counter">
-            <h2 class="counter-number">6+</h2>
+            <h2 class="counter-number" data-number="1000">0+</h2>
+            <p>Worked in Hour</p>
+          </div>
+          <div class="counter">
+            <h2 class="counter-number" data-number="200">0+</h2>
             <p>Real professionals</p>
           </div>
           <div class="counter">
-            <h2 class="counter-number">6+</h2>
+            <h2 class="counter-number" data-number="180">0+</h2>
             <p>Happy clients</p>
           </div>
         </div>
@@ -313,7 +323,7 @@
       <!-- ========== End COUNTER Section ========== -->
 
       <!-- ========== Start SERVICES Section ========== -->
-      <section class="section section-services">
+      <section class="section section-services" id="services">
         <!-- section heading and description  -->
         <div class="container">
           <h2 class="section-common--heading">Service Offers</h2>
@@ -549,7 +559,7 @@
       <!-- ========== End FREELANCING Section ========== -->
 
       <!-- ========== Start CONTACT Section ========== -->
-      <section class="section section-contact">
+      <section class="section section-contact" id="contact">
         <!-- section heading  -->
         <div class="container">
           <h2 class="section-common--heading">Contact Me</h2>
@@ -605,6 +615,8 @@
       <!-- ========== End CONTACT Section ========== -->
     </main>
     <!-- ========== MAIN END ========== -->
+
+    <!-- ========== Start FOOTER ========== -->
     <footer class="section section-footer">
       <div class="container grid grid-four--cols">
         <div class="footer-about">
@@ -738,15 +750,14 @@
         </div>
       </div>
     </footer>
-    <!-- navigate to home  -->
+    <!-- ========== End FOOTER ========== -->
+    <!-- scroll to top  -->
     <div class="navigate-home">
       <a href="#home">
         <ion-icon name="arrow-up" class="icon"></ion-icon>
       </a>
     </div>
-    <!-- ========== Start FOOTER ========== -->
-
-    <!-- ========== End FOOTER ========== -->
+    <!-- end  -->
 
     <!-- ========== Start JAVASCRIPT CDN Link ========== -->
     <!-- ionicons icon cdn-->
