@@ -1,3 +1,22 @@
+/*********** START RESPONSIVE NAVBAR FILTERING ***********/
+const menuContainer = document.querySelector("#menu-container");
+const mobileMenuBtns = document.querySelector(".mobile-menu--btns");
+const menuItems = document.querySelectorAll(".nav-link");
+
+mobileMenuBtns.addEventListener("click", () =>
+  menuContainer.classList.toggle("active")
+);
+
+menuItems.forEach((item) =>
+  item.addEventListener("click", () => {
+    if (menuContainer.classList.contains("active")) {
+      menuContainer.classList.remove("active");
+    }
+  })
+);
+
+/*********** START RESPONSIVE NAVBAR FILTERING ***********/
+
 /*********** START PORTFOLIO FILTERING ***********/
 // selecting dom
 const ButtonsArea = document.querySelector(".filter-buttons");
@@ -41,7 +60,26 @@ ButtonsArea.addEventListener("click", (e) => {
 });
 /*********** END PORTFOLIO FILTERING ***********/
 
-/*********** START SWIPER SLIDER FOR HOME TESTIMONIAL ***********/
+/*********** START COUNTER NUMBER INCREMENT ***********/
+const counterElm = document.querySelectorAll(".counter-number");
+const speed = 50;
+counterElm.forEach((currElm) => {
+  const updateNumber = () => {
+    const targetNum = parseInt(currElm.dataset.number);
+    const initialNum = parseInt(currElm.innerText);
+    const incrementNum = Math.trunc(targetNum / speed);
+
+    if (initialNum < targetNum) {
+      currElm.innerText = `${initialNum + incrementNum}+`;
+      setTimeout(updateNumber, 10);
+    }
+  };
+
+  updateNumber();
+});
+/*********** END COUNTER NUMBER INCREMENT ***********/
+
+/*********** START SWIPER SLIDER FOR TESTIMONIAL ***********/
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 30,
@@ -53,4 +91,4 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
-/*********** END SWIPER SLIDER FOR HOME TESTIMONIAL ***********/
+/*********** END SWIPER SLIDER FOR TESTIMONIAL ***********/
