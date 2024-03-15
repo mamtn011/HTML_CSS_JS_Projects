@@ -1,4 +1,4 @@
-/*********** START RESPONSIVE NAVBAR FILTERING ***********/
+/*********** START RESPONSIVE NAVBAR ***********/
 const menuContainer = document.querySelector("#menu-container");
 const mobileMenuBtns = document.querySelector(".mobile-menu--btns");
 const menuItems = document.querySelectorAll(".nav-link");
@@ -14,8 +14,26 @@ menuItems.forEach((item) =>
     }
   })
 );
+/*********** END RESPONSIVE NAVBAR ***********/
 
-/*********** START RESPONSIVE NAVBAR FILTERING ***********/
+/*********** START STICKY NAVBAR ***********/
+const sectionHero = document.querySelector(".section-hero");
+const stickyObserver = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    !ent.isIntersecting
+      ? document.body.classList.add("sticky")
+      : document.body.classList.remove("sticky");
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-100px",
+  }
+);
+// when the hero section end part reached then we need to show the sticky navigation
+stickyObserver.observe(sectionHero);
+/*********** END STICKY NAVBAR ***********/
 
 /*********** START PORTFOLIO FILTERING ***********/
 // selecting dom
@@ -62,6 +80,7 @@ ButtonsArea.addEventListener("click", (e) => {
 
 /*********** START COUNTER NUMBER INCREMENT ***********/
 const counterElm = document.querySelectorAll(".counter-number");
+const sectionCounter = document.querySelector(".section-counter");
 const speed = 50;
 counterElm.forEach((currElm) => {
   const updateNumber = () => {
@@ -74,15 +93,29 @@ counterElm.forEach((currElm) => {
       setTimeout(updateNumber, 10);
     }
   };
-
-  updateNumber();
+  // counter observer
+  const counterObserver = new IntersectionObserver(
+    (entries) => {
+      const ent = entries[0];
+      if (ent.isIntersecting) {
+        updateNumber();
+      } else {
+        currElm.innerText = "0";
+      }
+    },
+    {
+      root: null,
+      threshold: 0.5,
+      // rootMargin: "-50px",
+    }
+  );
+  counterObserver.observe(sectionCounter);
 });
+
 /*********** END COUNTER NUMBER INCREMENT ***********/
 
 /*********** START SWIPER SLIDER FOR TESTIMONIAL ***********/
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
+const swiper = {
   autoplay: {
     delay: 2500,
   },
@@ -90,5 +123,22 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-});
+};
+const myMedia992 = (e) => {
+  if (e.matches) {
+    new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      ...swiper,
+    });
+  } else {
+    new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      ...swiper,
+    });
+  }
+};
+const media992 = window.matchMedia("(max-width: 992px)");
+media992.addEventListener("change", myMedia992);
+
 /*********** END SWIPER SLIDER FOR TESTIMONIAL ***********/
