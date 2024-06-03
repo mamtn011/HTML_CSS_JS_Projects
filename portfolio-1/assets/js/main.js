@@ -124,6 +124,11 @@ const swiper = {
     clickable: true,
   },
 };
+new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  ...swiper,
+});
 const myMedia992 = (e) => {
   if (e.matches) {
     new Swiper(".mySwiper", {
