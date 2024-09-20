@@ -52,6 +52,7 @@ li {
   max-height: 60rem;
   min-width: 30rem;
   min-height: 45rem;
+  padding: 2rem 0;
   background: #def3f4;
   color: #030507;
   display: flex;
